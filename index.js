@@ -1,16 +1,16 @@
-import through from 'through2';
-import { HtmlValidate } from 'html-validate';
-import { text as textFormat } from 'html-validate/build/formatters/text';
-import c from "ansi-colors";
-import log from "fancy-log";
-import PluginError from "plugin-error";
+var through = require('through2');
+var HtmlValidate = require('html-validate').HtmlValidate;
+var textFormat = require('html-validate/build/formatters/text');
+var c = require("ansi-colors");
+var log = require("fancy-log");
+var PluginError = require("plugin-error");
 
-const PLUGIN_NAME = 'gulp-html-validate';
+var PLUGIN_NAME = 'gulp-html-validate';
 
 function validate(file, encoding, callback) {
   try {
-    const htmlvalidate = new HtmlValidate();
-    const report = htmlvalidate.validateFile(file.path);
+    var htmlvalidate = new HtmlValidate();
+    var report = htmlvalidate.validateFile(file.path);
 
     if (!report.valid) {
       log(c.red(`File is not valid => ${report.results[0].filePath}`));
@@ -18,7 +18,7 @@ function validate(file, encoding, callback) {
     }
     callback(null, file);
   } catch (error) {
-    const err = new PluginError({
+    var err = new PluginError({
       plugin: PLUGIN_NAME,
       message: error
     });
@@ -27,4 +27,4 @@ function validate(file, encoding, callback) {
   }
 }
 
-module.exports = () => through.obj(validate);
+module.exports = function () { return through.obj(validate) };
