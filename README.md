@@ -4,7 +4,9 @@ Validate html files with [html-validate](https://html-validate.org/)
 `
 npm i https://github.com/alte0/gulp-html-validate
 `
-Use
+
+Use plugin:
+
 ```sh
 import valid from 'gulp-html-validate';
 
