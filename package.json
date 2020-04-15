@@ -1,0 +1,30 @@
+{
+  "name": "gulp-html-validate",
+  "version": "1.0.0",
+  "description": "Validate html files with https://html-validate.org/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alte0/gulp-html-validate.git"
+  },
+  "keywords": [
+    "html",
+    "validate",
+    "html-validate"
+  ],
+  "author": "Maxim Dmitriev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alte0/gulp-html-validate/issues"
+  },
+  "homepage": "https://github.com/alte0/gulp-html-validate#readme",
+  "devDependencies": {
+    "ansi-colors": "^4.1.1",
+    "fancy-log": "^1.3.3",
+    "html-validate": "^2.20.0",
+    "plugin-error": "^1.0.1"
+  }
+}
