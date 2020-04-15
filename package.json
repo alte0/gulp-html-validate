@@ -1,6 +1,6 @@
 {
   "name": "gulp-html-validate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate html files with https://html-validate.org/",
   "main": "index.js",
   "scripts": {
