@@ -10,6 +10,10 @@ var PluginError = require("plugin-error");
 var PLUGIN_NAME = 'gulp-html-validate';
 
 function validate(file, encoding, callback) {
+  if (file.isNull()) {
+    return cb(null, file);
+  }
+
   try {
     var htmlvalidate = new HtmlValidate();
     var report = htmlvalidate.validateFile(file.path);
