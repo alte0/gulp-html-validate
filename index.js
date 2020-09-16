@@ -2,7 +2,7 @@
 
 var through = require('through2');
 var HtmlValidate = require('html-validate').HtmlValidate;
-var textFormat = require('../html-validate/build/formatters/text').default;
+var textFormat = require('html-validate/build/formatters/text').default;
 var c = require("ansi-colors");
 var log = require("fancy-log");
 var PluginError = require("plugin-error");
