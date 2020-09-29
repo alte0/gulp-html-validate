@@ -2,7 +2,7 @@
 Validate html files with [html-validate](https://html-validate.org/)
 
 `
-npm i https://github.com/alte0/gulp-html-validate
+npm i -D https://github.com/alte0/gulp-html-validate
 `
 
 Use plugin:
@@ -21,11 +21,11 @@ Create `.htmlvalidate.json`:
 ```js
 {
   "extends": [
-    "htmlvalidate:recommended"
+    "html-validate:recommended"
   ],
 
   "rules": {
-    "close-order": "error"
+    "close-order": "error",
     "void": ["warn", {"style": "omit"}]
   }
 }
