@@ -2,7 +2,7 @@
 
 var through = require('through2');
 var HtmlValidate = require('html-validate').HtmlValidate;
-var textFormat = require('html-validate/build/formatters/text').default;
+var textFormat = require('html-validate/dist/formatters/text').default;
 var c = require("ansi-colors");
 var log = require("fancy-log");
 var PluginError = require("plugin-error");
@@ -20,7 +20,7 @@ function validate(file, encoding, callback) {
 
     if (!report.valid) {
       log(c.red(`File is not valid => ${report.results[0].filePath}`));
-      log(c.green(`File - ${textFormat(report.results)}`));
+      log(c.white(`File\n${textFormat(report.results)}`));
     }
     callback(null, file);
   } catch (error) {
